@@ -17,6 +17,8 @@ $ mkdir work/jina/textGit -p
 
 https://github.com/JINA-NA/testGit_0309.git 이런식으로.  
 
+
+
 ## 4. 주소를 gitbash에 입력
 
 ```
@@ -25,10 +27,6 @@ $ cd [reposity폴더]
 ```
 
 **shell에서는 ctrl+c / ctrl+v 안 먹음.  그래서 복사는 ctrl+insert, 붙여넣기는 shift+insert**
-
-
-
-![image-20200309113819525](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200309113819525.png)
 
 git의 위치로 들어오면 문장 끝에 **master**이 생길거임. 꼭 이 상태에서 작업해야만 git이 작동된다.
 
@@ -54,7 +52,7 @@ $ git commit -m "[첨부내용을 작성]"		//-m : 한 줄짜리 명령어
 메일 보내는 것에 비유하자면 받는 사람 주소, 본문과 같은 내용을 짧게  한줄로 작성하는 것.
 " " 큰 따옴표 안에 작성하는 이유는 코드가 아니고 실 내용이기 때문에.
 
-- 내용을  잘못 작성해서 바꾸고 싶을 때는 ```git commit --amend -m [수정할 내용]```
+- 내용을  잘못 작성해서 바꾸고 싶을 때는 ```git commit --amend -m "[수정할 내용]"```
 
 근데, ```git reset```써서 add부터 다시 하는 것도 나쁘지 않음.
 
@@ -123,7 +121,7 @@ git reset
 
 음.. 쉽게 말하면 실행취소.
 
-가장 최상위 상태에서 몇 단계 전까지 리셋을 하겠다.
+가장 최상위 상태에서 몇 단계 전까지 리셋을 하겠다.??
 
 ```git reset HEAD^```  한단계 전까지 리셋을 하겠다.
 
@@ -131,7 +129,7 @@ git reset
 
 ^ : 최초
 
-$ : 마지막
+$ : 마지막 ??
 
 
 
@@ -145,7 +143,7 @@ $ : 마지막
 
 ![image-20200309141037740](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200309141037740.png)
 
-해결방법
+-해결방법-
 
 1.  ```git pull```을 해서 먼저 웹에서 다운을 받아.
 
@@ -165,11 +163,14 @@ $ : 마지막
 
 
 
-###  
+##  12. 로그인 한 github 로그아웃하기
+탐색기 열기(윈도우key+e) > 제어판 > 사용자 계정 > 자격 증명  관리자 > window 자격 증명 > 일반 자격 증명 > git 자격 증명 제거
+
+
 
 # **git의 개념**
 
-git은 쉽게 말하면 클라우드같은 개념임. 웹사이트 구축이라는 게 워낙 팀작업이고 다수의 제작자가 필요하기 때문에 복잡해질 가능성이 농후함. 그래서 쓰는거지.
+git은 쉽게 말하면 클라우드같은 개념인데 버전관리를 위해 사용하는 시스템. 웹사이트 구축이라는 게 워낙 팀작업이고 다수의 제작자가 필요하기 때문에 복잡해질 가능성이 농후함. 그래서 쓰는거지.
 
 기본적으로 git은 아래의 프로세스로 진행이 되고 있다.
 
@@ -178,13 +179,15 @@ git은 쉽게 말하면 클라우드같은 개념임. 웹사이트 구축이라�
 
 
 
+**< 참고자료 >**
 
-
-- github [web_publlish_202002] 에 선생님의 강의자료 업로드됨.
+- github [web_publlish_202002] 에 선생님 강의자료 업로드됨.
 
   https://github.com/xidoWeb/web_publish_202002
 
-- 참고자료 : git 책 https://git-scm.com/book/en/v2
+- git 책 
+
+  https://git-scm.com/book/en/v2
 
 
 
