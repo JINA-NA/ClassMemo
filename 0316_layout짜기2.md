@@ -26,7 +26,8 @@
 : wai-aria는 접근성이 강화된 기능. aria-hidden 숨길거냐? true 읽지 않을거다.
 
 
-style(.css) 링크 연결하기
+
+**style(.css) 링크 연결하기**
 
 ```html
 <link rel="stylesheet" href="./css/src/jisan.css">
