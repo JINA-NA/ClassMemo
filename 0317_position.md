@@ -56,11 +56,7 @@ position: -o-stickcy : 오페라
 
 ---
 
+#  지산 포레스트 layout 짜기 풀이
 
 
-# align
-
-# rotate, scale
-
-# gradient
 
