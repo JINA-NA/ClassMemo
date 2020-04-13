@@ -210,3 +210,43 @@ git은 쉽게 말하면 클라우드같은 개념인데 버전관리를 위해 �
 
 
 
+---
+
+# git 꼬였을 때 해결방법
+
+---
+
+## 상황
+
+ git pull과 git push가 꼬여버렸다. git pull을 하자니 파일을 일일히 확인하기엔 무리인 거 같고, 그렇다고 git push가 불가한 상태. 그래서 그냥 웹상의 repository를 삭제하고, 기존에 로컬에 있는 폴더와 파일들을 웹상으로 올리고 싶다.
+
+## 방법
+
+1. 웹 상에서 해당 repository를 삭제한다.
+
+   setting -> delete repository   ***백업은 필수!**
+
+2. 해당 로컬 폴더에 있었던 .git 폴더를 삭제한다.
+
+   폴더가 안 보일 시, 숨겨진 파일 보기로 봐야 보인다.
+
+3. git-bash에 아래의 명령어를 차례대로 입력한다. 웹 상에 올리고자 하는 폴더 내부에서 git bash 실행
+
+   ```shell
+   git init  //이 명령어 수행 후, (master)이 떠야함
+   git add *
+   git commit -m "내용 설명"
+   ```
+
+4. 웹 상에서 새로운 repository 생성한다.
+
+5. 그리고나서 아래의 명령어를 차례대로 입력한다.
+
+   ```shell
+   git remote add origin http://github.com/JINA-NA/practice
+   git push origin master
+   ```
+
+   practice는 내가 새로 생성한 repository 이름
+
+6. 웹에 잘 올라갔는지 확인하면 끝!
