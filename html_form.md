@@ -57,6 +57,7 @@ form을 한 번 더 감싸는 것
 ## **input**
 
 - 싱글태그
+
 -  inline-block 요소
 
 - type 
@@ -92,32 +93,90 @@ form을 한 번 더 감싸는 것
   <멀티 - input 태그 내에 들어가는 속성이 아니라 따로 있는 태그> 
 
   - textarea : 카톡창 처럼 텍스트를 쓸  수 있다
+  
+    - readonly 속성을 주면, 수정할  수 없지만, 계약서나 이런거는 textarea로 쓰지마라
+
   - select, option : 예)패밀리 사이트
+
+    ```html
+  <label for="optionSelect">상품의 추가 옵션을 선택하세요</label>
+    <select name="" id="optionSelect">
+  	<option>옵션 선택</option>
+    	<optgroup label="렌즈 부분">
+    		<option value="lens">카메라 렌즈</option>
+    		<option value="glass">안경 케이스</option>
+    	</optgroup>
+    	<optgroup label="기타">
+    		<option value="parking">주차권</option>
+    	</optgroup>
+    </select>
+  ```
+  
+  - **optgroup**
+    - 이 태그는 디자인을 할 수가 없다. 그래서 dl,dt,dd를 사용해서 디자인을 하기도한다.
+  - select 안에는 그림(아이콘)을 삽입할 수 없다
+  
   - button
 
+    - input 안의 속성이었던 button이 다른 데서 너무 필요로 하니까 독립적으로도 사용할 수 있게 한거지~
   
-
-  **<html5에서부터 추가된 기능>**- 일부 기능은 익스플로러에서 작동하지 않을 수 있다.
-
+    - type
+  
+      - submit
+  
+      - reset
+  
+      - button
+  
+        ```html
+        <button type="submit"확인</button>
+        <button type="reset">취소</button>
+        <button type="button">기능</button
+        ```
+  
+        기본적으로 읽힐 때 '버튼'이라는 단어가 들어가기 때문에, ''확인''이라고만 써도 '확인버튼'이라고 읽는다.
+  
+  
+  
+  **<html5에서부터 추가된 기능>**- 브라우저에 따라 작동하지 않을 수도 있다. 
+  
   <입력>
-
-  - number :  예)수량 변경할때 해당 숫자를 직접 기입할  수 있도록
+  
+  - number :  예)수량 변경할때 해당 숫자를 직접 기입+화살표로 수량 조절 
+  
+    ```html
+    <input type="number" min="1" max="20" step="1"> 
+    ```
+  
+    - step: 소수점으로 못 쓰게. 1개 단위로만 증가/감소한다.
+  
   - range : 예) 폰에서 음량 버튼 조절
+  
   - tel : 전화번호
+  
   - email : 이메일
+  
     - @ 존재유무로 이메일인지 아닌지 확인한다.
+  
   - search
+  
   - url : 
+  
     - http:// 의 존재유무로 url인지 아닌지 확인한다.
-
   
-
+  
+  
   <체크>
-
-  - color: 
-  - datalist : 예) 배송기사님께 남기고 싶은 말
-
   
+  - color :  컬러 picker가 나옴
+  - datalist : 예) 배송기사님께 남기고 싶은 말
+  
+  
+  
+  - time
+  - week
+  - date
+  - datetime
 
 ```html
 <label for="serachArea">검색할 내용을 입력하세요</label>
@@ -131,6 +190,7 @@ form을 한 번 더 감싸는 것
 
 **label**
 이름을 다는 기능 . ```label``` 과 연동되는 이름
+class="hidden"을 줘서 안 보이게 할 수도 있다.
 
 **name**
 사용자에게 받은 데이터를 서버파일의 어떤 구역으로 보낼지 하는 것
@@ -146,7 +206,8 @@ form을 한 번 더 감싸는 것
 
 입력하라고 한 사항들 입력 안하고 확인버튼 누를 경우, 입력하라고 경고창(?) 나오는 속성
 
-이 태그의 속성값은 required 로 같다. 속성과 속성값이 같을 경우 생략해도 된다. ```required ```라고만 써도 됨(아래 코드 참고)
+이 태그의 속성값은 required 로 같다. ```required="required"``` 
+속성과 속성값이 같을 경우 생략해도 된다. ```required ```라고만 써도 됨(아래 코드 참고)
 
 ```html
 <input type="search" id="searchArea" name="searchArea" value="" / placeholder="검색할 내용을 입력하세요" required />
