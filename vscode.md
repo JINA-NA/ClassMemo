@@ -57,6 +57,10 @@ browser-sync start
 
 shit + alt + 방향키 : 줄 복사하기
 
+ctrl + alt + i : 숫자 순서대로 나열
+
+shift + alt + p  -->  wrap 검색  -->  감쌀 태그 기재 후 엔터
+
 
 
 ## vs code에서 바로 bash 사용하기
